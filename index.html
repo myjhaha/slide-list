@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/slide-list-style.css">
+  <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+  <title>my first css3 study project</title>
+  <script type="text/javascript">
+var getQueryString = function(paras){
+    var url = location.href;
+    var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");
+    var paraObj = {}
+    for (i=0; j=paraString[i]; i++){
+        paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);  
+    }  
+    var returnValue = paraObj[paras.toLowerCase()];  
+    if(typeof(returnValue)=="undefined"){
+        return "";  
+    }else{
+        return returnValue; 
+    }
+}
+$(document).ready(function(){
+	$(".zk").hide();
+        var u_num = getQueryString('u_sea');
+        if(u_num == 0 || u_num == null || u_num < 0 || u_num > 25){
+           u_num = 1; 
+        }
+    //$("#zk_"+u_num).slideToggle();
+    //$("#"+u_num).addClass('xz');
+	$(".clik").click(function(){
+		var u_class = $(this).attr('class');
+		if(u_class == 'clik'){
+			$(this).addClass('xz');
+		}else{
+			$(this).removeClass('xz');
+		}
+		var zk_id = '#zk_'+$(this).attr('id');
+		$(zk_id).slideToggle(200);
+		return false;
+	});
+});
+
+</script>
+</head>
+
+<body>
+  <div class="mainbody">
+    <!-- 列表 -->
+		<div class="slide_list">
+			<ul>
+				<li id="1" class="clik"><a class="link" href="#"><span class="num">1</span>常用表格下载</a></li>
+        <li id="zk_1" class="zk">
+          <div class="zk_con">
+            <div class="pc_1"></div>
+            <div class="pc_2">
+              <p></p>
+              <h3>哈哈哈</h3>
+            </div>
+            <div class="pc_3"></div>
+          </div>
+        </li>
+        <li id="2" class="clik"><a class="link" href="#"><span class="num">2</span>常用表格下载</a></li>
+        <li id="zk_2" class="zk">
+          <div class="zk_con">
+            <div class="pc_1"></div>
+            <div class="pc_2">
+              <p></p>
+              <h3>哈哈哈 哈哈哈 哈哈哈 哈哈哈</h3>
+            </div>
+            <div class="pc_3"></div>
+          </div>
+        </li>
+        <li id="3" class="clik"><a class="link" href="#"><span class="num">3</span>常用表格下载</a></li>
+        <li id="zk_3" class="zk">
+          <div class="zk_con">
+            <div class="pc_1"></div>
+            <div class="pc_2">
+              <p></p>
+              <h3>呵呵呆  呵呵呵 呵呵 </h3>
+            </div>
+            <div class="pc_3"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+     <div class="pc_1"></div>
+      <div class="pc_1"></div>
+       <div class="pc_1"></div>
+    
+  </div>
+</body>
+</html>

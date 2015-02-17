@@ -1,0 +1,14 @@
+.slide_list{width:100%;margin-top:7px;overflow:hidden;}
+.slide_list ul{padding-left:0;}
+.slide_list li{width:689px;height:33px;background:url(./img/right_bg.png) no-repeat left 0px;margin-top:3px;font-size:14px;}
+.slide_list li .num { width:34px; height:33px; line-height:33px; display:inline-block; text-align:center; margin-right:10px;}
+.slide_list li .time { width:100px; height:33px; line-height:33px; display:inline-block; text-align:center; margin-right:10px;}
+.slide_list li .name { width:100px; height:33px; line-height:33px; display:inline-block; text-align:center; margin-right:10px;}
+.slide_list li .link {width:689px;height:33px;display:block;white-space:nowrap;}
+.slide_list li.xz {background: url(./img/right_bg.png) no-repeat left -36px; font-weight:bold;}
+.slide_list li.zk {background:none; height:auto;}
+.zk_con { width:689px; clear:both;}
+.zk_con .pc_1 { width:689px; height:10px; overflow:hidden;background: url(./img/right_bg.png) no-repeat left -72px;}
+.zk_con .pc_2 {width:673px;border-left: 1px solid #C8E1E8; color:#595959; line-height:normal;font-size:14px; font-weight:normal;background-color:#FFFFFF;border-right: 1px solid #C8E1E8; padding:10px 4px 10px 10px;}
+.pc_2 li {background:none;width:auto;height:auto;padding:auto;margin:auto;}
+.zk_con .pc_3 { width:689px; height:4px; overflow:hidden;background: url(./img/right_bg.png) no-repeat left -85px;}
